@@ -33,6 +33,30 @@
 			icon: '🎙️',
 			path: '/meeting-minutes',
 			color: 'red'
+		},
+		{
+			id: 'pdf-analyzer',
+			title: 'PDF 문서 분석기',
+			description: 'PDF 파일을 업로드하면 페이지별로 요약해 드립니다',
+			icon: '📑',
+			path: '/pdf-analyzer',
+			color: 'green'
+		},
+		{
+			id: 'chatbot',
+			title: '대학생 도우미 챗봇',
+			description: '대학생활에 필요한 모든 것을 물어보세요',
+			icon: '💬',
+			path: '/chatbot',
+			color: 'teal'
+		},
+		{
+			id: 'presentation-script',
+			title: '발표 대본 생성기',
+			description: 'PDF나 PPT 파일을 업로드하면 발표 대본을 만들어 드립니다',
+			icon: '🎤',
+			path: '/presentation-script',
+			color: 'amber'
 		}
 	];
 </script>
@@ -57,7 +81,10 @@
 						{service.color === 'blue' ? 'from-blue-400 to-blue-600' : 
 						 service.color === 'indigo' ? 'from-indigo-400 to-indigo-600' : 
 						 service.color === 'purple' ? 'from-purple-400 to-purple-600' : 
-						 'from-red-400 to-red-600'}">
+						 service.color === 'red' ? 'from-red-400 to-red-600' :
+						 service.color === 'green' ? 'from-green-400 to-green-600' :
+						 service.color === 'teal' ? 'from-teal-400 to-teal-600' :
+						 'from-amber-400 to-amber-600'}">
 					</div>
 
 					<!-- 아이콘 -->
@@ -157,5 +184,53 @@
 
 	.to-red-600 {
 		--tw-gradient-to: rgb(220 38 38);
+	}
+
+	.group:hover .group-hover\:text-green-600 {
+		color: rgb(22 163 74);
+	}
+
+	.text-green-600 {
+		color: rgb(22 163 74);
+	}
+
+	.from-green-400 {
+		--tw-gradient-from: rgb(74 222 128);
+	}
+
+	.to-green-600 {
+		--tw-gradient-to: rgb(22 163 74);
+	}
+
+	.group:hover .group-hover\:text-teal-600 {
+		color: rgb(13 148 136);
+	}
+
+	.text-teal-600 {
+		color: rgb(13 148 136);
+	}
+
+	.from-teal-400 {
+		--tw-gradient-from: rgb(45 212 191);
+	}
+
+	.to-teal-600 {
+		--tw-gradient-to: rgb(13 148 136);
+	}
+
+	.group:hover .group-hover\:text-amber-600 {
+		color: rgb(217 119 6);
+	}
+
+	.text-amber-600 {
+		color: rgb(217 119 6);
+	}
+
+	.from-amber-400 {
+		--tw-gradient-from: rgb(251 191 36);
+	}
+
+	.to-amber-600 {
+		--tw-gradient-to: rgb(217 119 6);
 	}
 </style>
